@@ -60,43 +60,6 @@ public class User {
         return montantRemboursement;
     }
 
-    // Setters
-    public void setNumeroSecuriteSociale(String numeroSecuriteSociale) {
-        this.numeroSecuriteSociale = numeroSecuriteSociale;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
-
-    public void setDateNaissance(String dateNaissance) {
-        this.dateNaissance = dateNaissance;
-    }
-
-    public void setNumeroTelephone(String numeroTelephone) {
-        this.numeroTelephone = numeroTelephone;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setIdRemboursement(int idRemboursement) {
-        this.idRemboursement = idRemboursement;
-    }
-
-    public void setCodeSoin(String codeSoin) {
-        this.codeSoin = codeSoin;
-    }
-
-    public void setMontantRemboursement(double montantRemboursement) {
-        this.montantRemboursement = montantRemboursement;
-    }
-
     @Override
     public String toString() {
         return "com.project.User{" +

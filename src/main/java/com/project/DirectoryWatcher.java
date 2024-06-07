@@ -13,6 +13,8 @@ public class DirectoryWatcher {
     }
 
     public void watch() throws IOException, InterruptedException {
+        // Traiter les fichiers existants au démarrage
+        processExistingFiles();
         WatchService watchService = FileSystems.getDefault().newWatchService();
         folderPath.register(watchService, StandardWatchEventKinds.ENTRY_CREATE);
 
@@ -26,6 +28,16 @@ public class DirectoryWatcher {
                 }
             }
             key.reset();
+        }
+    }
+
+    private void processExistingFiles() throws IOException {
+        DirectoryStream<Path> directoryStream = Files.newDirectoryStream(folderPath, "users_*.csv");
+        for (Path filePath : directoryStream) {
+            if (filePath.toString().matches(".*users_\\d{14}\\.csv")) {
+                System.out.println("Processing existing file: " + filePath);
+                processFile(filePath);
+            }
         }
     }
 
