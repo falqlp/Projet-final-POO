@@ -1,0 +1,6 @@
+Numero_Securite_Sociale,Nom,Prenom,Date_Naissance,Numero_Telephone,E_Mail,ID_Remboursement,Code_Soin,Montant_Remboursement
+1234567890123,Dupont,Jean,1980-05-12,0601020304,jean.dupont@example.com,1,SO123,100.5
+2345678901234,Martin,Marie,1975-08-22,0612345678,marie.martin@example.com,2,SO124,200.75
+3456789012345,Bernard,Pierre,1990-02-15,0623456789,pierre.bernard@example.com,3,SO125,150.0
+4567890123456,Durand,Lucie,1985-11-30,0634567890,lucie.durand@example.com,4,SO126,175.25
+5678901234567,Lefevre,Julie,1992-07-09,0645678901,julie.lefevre@example.com,5,SO127,225.0
