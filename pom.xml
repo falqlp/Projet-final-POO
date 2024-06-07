@@ -64,7 +64,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.5</version>
+                <version>0.8.12</version>
                 <executions>
                     <execution>
                         <goals>
@@ -77,6 +77,17 @@
                         <goals>
                             <goal>report</goal>
                         </goals>
+                    </execution>
+                    <execution>
+                        <id>post-unit-test-report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                        <configuration>
+                            <dataFile>target/jacoco.exec</dataFile>
+                            <outputDirectory>target/site/jacoco-ut</outputDirectory>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
