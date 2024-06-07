@@ -29,3 +29,4 @@ Le projet est organisé en plusieurs classes principales :
 ### Configuration de PostgreSQL
 
 Vous pouvez utiliser Docker pour configurer une instance PostgreSQL
+Le docker compose se trouve dans **`/docker`**. La table sera généré automatiquement.
