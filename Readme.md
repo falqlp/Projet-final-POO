@@ -30,3 +30,7 @@ Le projet est organisé en plusieurs classes principales :
 
 Vous pouvez utiliser Docker pour configurer une instance PostgreSQL
 Le docker compose se trouve dans **`/docker`**. La table sera généré automatiquement.
+
+## Github Actions
+
+Il existe une pipeline github qui execute tout les tests a chaque push sur la branche principale
