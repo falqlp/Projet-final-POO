@@ -1,5 +1,6 @@
 # Projet de Traitement de Fichiers Batch en Java
 
+[![Coverage Status](https://codecov.io/gh/falqlp/Projet-final-POO/branch/master/graph/badge.svg)](https://codecov.io/gh/falqlp/Projet-final-POO)
 ## Description du Projet
 
 Ce projet consiste à développer un programme batch en Java pour :
