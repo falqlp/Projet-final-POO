@@ -16,7 +16,17 @@ public class DatabaseManager {
     public void saveUser(User user, String timestamp) throws SQLException {
         try (Connection connection = this.getDBConnection()) {
             String query = "INSERT INTO users (Numero_Securite_Sociale, Nom, Prenom, Date_Naissance, Numero_Telephone, E_Mail, ID_Remboursement, Code_Soin, Montant_Remboursement, Timestamp_fichier) " +
-                    "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ";
+                    "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) " +
+                    "ON CONFLICT (ID_Remboursement) DO UPDATE SET " +
+                    "Numero_Securite_Sociale = EXCLUDED.Numero_Securite_Sociale, " +
+                    "Nom = EXCLUDED.Nom, " +
+                    "Prenom = EXCLUDED.Prenom, " +
+                    "Date_Naissance = EXCLUDED.Date_Naissance, " +
+                    "Numero_Telephone = EXCLUDED.Numero_Telephone, " +
+                    "E_Mail = EXCLUDED.E_Mail, " +
+                    "Code_Soin = EXCLUDED.Code_Soin, " +
+                    "Montant_Remboursement = EXCLUDED.Montant_Remboursement, " +
+                    "Timestamp_fichier = EXCLUDED.Timestamp_fichier";
 
             try (PreparedStatement statement = connection.prepareStatement(query)) {
                 statement.setString(1, user.getNumeroSecuriteSociale());
